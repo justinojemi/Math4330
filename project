@@ -1,1 +1,115 @@
+def vandermonde(x)
+result=[]
+for exponent in range[5]
+  temp=[]
+  for element in range(len(x))
+    temp.append(temp)
+return result
 
+'''
+twoNorm takes a vector as it's argument. It then computes the sum of  
+the squares of each element of the vector. It then returns the square 
+root of this sum.
+'''
+def twoNorm(vector):
+inputStatus = True   
+for i in range(len(vector01)):  
+    if ((type(vector01[i]) != int) and (type(vector01[i]) != float) and (type(vector01[i]) != complex)):
+      inputStatus = False
+      print("Invalid Input")
+      if inputStatus == True:
+          result = 0
+          for i in range(len(vector01)):
+              result = result + (vector01[i]**2)
+          result = result**(1/2)
+          return result
+
+"""
+Gives a orthonormal matrix, using modified Gram Schmidt Procedure
+:param A: a matrix of column vectors
+:return: a matrix of orthonormal column vectors
+"""
+def gramschmitt(Q,R)
+  for j = 1 to n
+    v(j)=a(j)
+  for j=1 to n
+    r(j,j)=twoNorm(v(j))
+    q(j)= v(j)/r(j,j)
+    for k = j+1 to n 
+      r(j,k)=q(j)*v(k)
+      v(k)=v(k)-(r(j,k)(q(j)))
+  return result    
+
+"""
+We have a matrix and we want tp conjugate all of the entries
+"""
+def conjugate(z)
+  result=z.real
+  result=result-(z.imag)j
+  return result
+
+"""
+We have a matrix and we want the transpose of the matrix
+"""
+def transpose(A):
+  result=[]
+  for iterator=0 to (len(A[0])-1)
+    temp=[]
+    for element=0 to (len(A)-1)
+      temp.append(A[iterator][element])
+    result.append(temp)
+  return result
+"""
+We have 'A' matric in C(mxn)
+we want to take the rows of A and place them as the columns of out outputs, and then conjugate the enties
+we want to have a matix in C(nxm)
+"""
+def conjugate transpose(A):
+  result=transpose(A)
+  for iterator=0 to (len(A)-1)
+    for element=0 to len(A[0]-1)
+      result[iterator][element]=conjugate(result[iterator][element])
+  return result    
+
+"""
+This function takes a list of vector and computes the sum of the list.
+We have a list of vectors
+We want the sum of the vectors
+We get there by adding the vectors
+"""
+def listsum(numList):
+    theSum = 0
+    for i in numList:
+        theSum = theSum + i
+    return theSum
+
+"""
+This function takes the dot product of two vectors
+We have a scalar and a vector
+we want to multiply the vector by the scalar
+we do this by finding the dot product
+"""
+def dot(vector01, vector02):
+    if len(vector01) != len(vector02):
+        raise ValueError
+    total = 0
+    for i in range(len(vector01)):
+        total += vector01[i] * vector02[i]
+    return total
+
+"""
+We have an upper triangular matrix A and a vector b.
+We want a vector x which solves Ax=b
+We get there by using the information from all of the following rows to solve for the element of x, corresponding to the current row
+"""
+def backsub(A,b)
+  result=b
+  for iterator in range(len(A[0]))
+    alpha=(len(A[0])-1)
+    result[alpha-iterator]=(b[alpha-iterator]-listsum[alpha-iterator][K]*result[K])*(1/A)[alpha-iterator][alpha-iterator]
+
+  return result
+
+B=backsub(R,Q*b)
+def d4interpolant(B,x):
+  return(B[0]+B[1]*x+B[2]*(x**2)+B[3]*(x**3)+B[4]*(x**4))
