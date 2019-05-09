@@ -1,0 +1,50 @@
+from basicfunctions import *
+
+def vandermonde(x)
+  result=[]
+  for exponent in range[5]
+    temp=[]
+    for element in range(len(x))
+    temp.append(temp)
+  return result
+
+"""
+Gives a orthonormal matrix, using modified Gram Schmidt Procedure
+:param A: a matrix of column vectors
+:return: a matrix of orthonormal column vectors
+"""
+def gramschmitt(Q,R)
+ for j=1 to n
+    V[j]=a[j]
+  for j=1 to n
+    r[j,j]=twonorm(v[j])
+    q[j]=v[j]/r[j,j]
+    for k=j+1 to n
+      r[j,k]=dot(conjugatetranspose(q[j]),v[k])
+      v[k]=v[k]-dot(r[j,k],q[j])
+  return [Q,R]
+
+"""
+We have 'A' matric in C(mxn)
+we want to take the rows of A and place them as the columns of out outputs, and then conjugate the enties
+we want to have a matix in C(nxm)
+"""
+def conjugatetranspose(A):
+  result=transpose(A)
+  for iterator=0 to (len(A)-1)
+    for element=0 to len(A[0]-1)
+      result[iterator][element]=conjugate(result[iterator][element])
+  return result  
+
+
+def backsub(A,b)
+  result=b
+  for iterator in range(len(A[0]))
+    alpha=(len(A[0])-1)
+    result[alpha-iterator]=(b[alpha-iterator]-listsum[alpha-iterator][K]*result[K])*(1/A)[alpha-iterator][alpha-iterator]
+
+  return result
+
+B=backsub(R,Q*b)
+def d4interpolant(B,x):
+  return(B[0]+B[1]*x+B[2]*(x**2)+B[3]*(x**3)+B[4]*(x**4))
